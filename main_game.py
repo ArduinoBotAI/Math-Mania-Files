@@ -161,6 +161,7 @@ while True:
     if(game_state == "Start Menu"):
         #screen.blit(bg_surface,(0,0))
         screen.blit(start_button_surface, start_button_hitbox)
+        screen.blit(pygame.transform.scale(pygame.image.load("logo.png").convert_alpha(), (400, 200)), (300,100))
     elif(game_state == "Player Select"):
         screen.blit(bg_surface,(0,0))
         screen.blit(pygame.transform.scale(pygame.image.load("player_boy.png").convert_alpha(), (400, 400)), (125,75))
@@ -423,9 +424,6 @@ while True:
 
     if(player_visible == True):
         screen.blit(player_surface, player_hitbox)
-
-    if(stage==0):
-        screen.blit(pygame.transform.scale(pygame.image.load("logo.png").convert_alpha(), (400, 200)), (300,100))
 
     pygame.display.update()
     clock.tick(60)
